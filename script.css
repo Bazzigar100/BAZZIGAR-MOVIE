@@ -1,0 +1,391 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #1e90ff;
+}
+
+#search-box {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+#movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.movie {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+}
+
+.movie h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.movie p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styles */
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1c86ee;
+}
+
+/* Admin Page Enhancements */
+#login-section, #upload-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+#secret-code, #video-upload {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#login-button {
+    width: 100%;
+}
+
+#movie-upload-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#movie-upload-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+#movie-upload-form input, #movie-upload-form textarea, #movie-upload-form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#movie-upload-form button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#movie-upload-form button:hover {
+    background-color: #1c86ee;
+}
+
+#upload-status {
+    font-weight: bold;
+    text-align: center;
+}
+
+#movie-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#modal-content {
+    background: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+#modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+#modal-content a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#modal-content a:hover {
+    background: #1c86ee;
+}
+
+#close-modal {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#premium-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.premium-plan {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.premium-plan h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.premium-plan p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.subscribe-button {
+    display: inline-block;
+    text-align: center;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #1c86ee;
+}
+
+#chatbot-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+#chat-window {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    background: white;
+    color: black;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #1e90ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #f1f1f1;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+#chat-input {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 0.5rem 1rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+#send-button:hover {
+    background-color: #1c86ee;
+}
+
+#video-upload-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#video-upload-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+#video-upload-form input, #video-upload-form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#video-upload-form button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#video-upload-form button:hover {
+    background-color: #1c86ee;
+}
+
+#video-upload-status {
+    font-weight: bold;
+    text-align: center;
+}

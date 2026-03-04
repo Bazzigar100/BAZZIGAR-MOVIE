@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Movies</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <header>
+        <h1>PR <span style="color: #1e90ff;">&#9658;</span> Movies</h1>
+        <input type="text" id="search-box" placeholder="Search for movies...">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="movie-grid">
+            <!-- Movies will be dynamically loaded here -->
+        </section>
+
+        <section id="upload-section">
+            <h2>Upload Your Video</h2>
+            <input type="file" id="video-upload" accept="video/*">
+            <p id="upload-message"></p>
+        </section>
+
+        <section id="premium-section">
+            <h2>Premium Plans</h2>
+            <div class="premium-plan">
+                <h3>Monthly Plan</h3>
+                <p><strong>Price:</strong> ₹120</p>
+                <a href="https://rzp.io/l/your-monthly-plan" class="subscribe-button" target="_blank">Subscribe</a>
+            </div>
+            <div class="premium-plan">
+                <h3>Yearly Plan</h3>
+                <p><strong>Price:</strong> ₹120</p>
+                <a href="https://rzp.io/l/your-yearly-plan" class="subscribe-button" target="_blank">Subscribe</a>
+            </div>
+        </section>
+
+        <section id="payment-section">
+            <h2>Subscribe to Premium</h2>
+            <button id="razorpay-button">Pay with Razorpay</button>
+        </section>
+
+        <section id="chatbot-section">
+            <h2>Chat with PR Movies Bot</h2>
+            <div id="chat-window">
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PR Movies</p>
+    </footer>
+
+    <div id="movie-modal" style="display: none;">
+        <div id="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p><strong>Release Date:</strong> <span id="modal-release-date"></span></p>
+            <img id="modal-image" alt="Movie Image">
+            <div>
+                <a id="watch-link" href="#" target="_blank">Watch</a>
+                <a id="download-link" href="#" download>Download</a>
+            </div>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.3.0/firebase-storage.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>
